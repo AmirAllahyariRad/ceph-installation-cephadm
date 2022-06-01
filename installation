@@ -8,4 +8,24 @@ $ ./cephadm install
 $ ./cephadm install ceph-common
 
 $ mkdir -p /etc/ceph
-$ cephadm bootstrap --mon-ip [host_ip_address]
+$ cephadm bootstrap --mon-ip [HOST_IP_ADDRESS]
+
+Ceph Dashboard is now available at:
+
+  URL: https://YOUR_HOST_NAME_or_IP_ADDRESS:8443/
+  User: admin
+  Password: 
+
+Access the Ceph CLI with:
+
+        sudo /usr/sbin/cephadm shell --fsid dc9f2f16-d076-11eb-af7d-5254004faa75 -c /etc/ceph/ceph.conf -k /etc/ceph/ceph.client.admin.keyring
+
+Please consider enabling telemetry to help improve Ceph:
+
+        ceph telemetry on
+
+For more information see:
+
+        https://docs.ceph.com/docs/master/mgr/telemetry/
+
+Bootstrap complete.
